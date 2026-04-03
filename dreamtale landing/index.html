@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DreaTale</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400;600&family=Inter:wght@400;500&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baskervville&display=swap" rel="stylesheet">
+<link href="https://db.onlinewebfonts.com/c/d673846667d72f82d5e5ed97f4e4ad19?family=Firlest" rel="stylesheet">
+<!-- <link href="./dist/output.css" rel="stylesheet"> -->
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            allura: ['Allura', 'cursive'],
+            cinzel: ['Cinzel', 'serif'],
+            baskervville: ['Baskervville', 'serif'],
+             firlest: ['Firlest', 'serif'],
+            inter: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            gold: {
+              light: '#f6d77a',
+              DEFAULT: '#e09f3b',
+              dark: '#d29b2e',
+              cta: '#e0b84a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+  html,
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+  .mask-page-cut {
+    -webkit-mask-image: 
+      url('./assets/image/clipmaskh.png'), url('./assets/image/clipmaskh.png'), url('./assets/image/clipmaskh.png'), url('./assets/image/clipmaskh.png'), url('./assets/image/clipmaskh.png'),
+      url('./assets/image/clipmaskh.png'), url('./assets/image/clipmaskh.png'), url('./assets/image/clipmaskh.png'), url('./assets/image/clipmaskh.png'), url('./assets/image/clipmaskh.png');
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-mode: alpha;
+    mask-image: 
+      url('./assets/image/clipmaskh.png'), url('./assets/image/clipmaskh.png'), url('./assets/image/clipmaskh.png'), url('./assets/image/clipmaskh.png'), url('./assets/image/clipmaskh.png'),
+      url('./assets/image/clipmaskh.png'), url('./assets/image/clipmaskh.png'), url('./assets/image/clipmaskh.png'), url('./assets/image/clipmaskh.png'), url('./assets/image/clipmaskh.png');
+    mask-size: 100% 100%;
+    mask-mode: alpha;
+  }
+</style>
+</head>
+
+<body class="font-inter antialiased min-h-screen
+             bg-[#FFF6E6]
+             bg-[url('./assets/image/texture.svg')]
+             bg-cover bg-no-repeat bg-top">
+
+<!-- WRAPPER -->
+<div class="w-full max-w-[1440px] mx-auto overflow-hidden">
+
+  <!-- HERO -->
+<section class="relative h-[1320px]">
+ <!-- VIDEO WRAPPER WITH PAGE CUT MASK -->
+  <div class="absolute inset-0 z-[1] mask-page-cut scale-[1.1]">
+
+    <video autoplay muted loop playsinline
+      class="absolute inset-0 w-full h-full object-cover">
+      <source src="./assets/image/video2.mp4" type="video/mp4">
+    </video>
+
+    <!-- DARK GRADIENT BOTTOM -->
+    <div class="absolute inset-0 z-10 pointer-events-none 
+      bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_25%,rgba(0,0,0,0.6)_50%,rgba(0,0,0,0.4)_75%,rgba(0,0,0,0.2)_100%)]">
+    </div>
+
+  </div>
+
+    <!-- NAV -->
+   <nav class="absolute top-6 left-1/2 -translate-x-1/2 
+            z-50
+            w-[1100px] h-[64px]
+            flex items-center justify-between
+            px-7
+            rounded-full
+            bg-black/10 backdrop-blur-[20px]
+            text-white">
+
+  <h1 class="relative top-[3px] flex h-[64px] items-center font-allura text-[62px] leading-none tracking-tight">
+    DreaTale
+  </h1>
+
+  <!-- LINKS -->
+  <div class="flex items-center gap-12 font-baskerville text-[20px] leading-none">
+    
+<a href="#" class="inline-block transition duration-300 ease-in-out
+  hover:scale-[0.97] hover:text-white">
+  Explore
+</a>
+    <span class="text-white/40">|</span>
+
+ <a href="#" class="inline-block transition duration-300 ease-in-out
+  hover:scale-[0.97] hover:text-white">
+  Library
+</a>
+
+    <span class="text-white/40">|</span>
+
+<a href="#" class="inline-block transition duration-300 ease-in-out
+  hover:scale-[0.97] hover:text-white">
+  Login
+</a>
+
+  </div>
+
+  <!-- BUTTON -->
+  <button class="flex items-center gap-3 px-8 h-[64px] rounded-full 
+    bg-gradient-to-b from-[#FFE7AC] to-[#E09F3B] 
+    text-black font-baskerville text-[24px] font-bold shadow-md
+    transition duration-300 ease-in-out
+    hover:scale-[0.97] active:scale-95 hover:shadow-xl">
+    
+    Register Now
+    <img src="./assets/image/bookblack.svg" class="w-[32px] h-[32px]" />
+  
+  </button>
+
+</nav>
+    <!-- HERO CONTENT -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white pt-[532px]">
+      <span class="font-baskervville serif text-[16px] px-5 py-2 mb-[32px] rounded-full bg-white/20 border border-white/50 backdrop-blur text-sm font-bold">
+        UNBOUND DREAMS
+      </span>
+      <h1 class="font-firlest text-[146px] leading-[175.5px] text-center mt-[32px]">
+        <span class="block">
+          <span>The</span><span class="ml-[36px]">Tale</span><span class="ml-[32px]">Is</span>
+        </span>
+        <span class="block mt-[-8px]">
+          <span>Yours</span><span class="ml-[38px]">To</span><span class="ml-[36px]">Tell
+            <img src="./assets/image/herokey.svg"
+                 class="absolute right-[130px] top-[64%] -translate-y-1/2 w-[300px] h-[300px] pointer-events-none">
+          </span>
+        </span>
+      </h1>
+      <p class="font-baskervville serif font-normal max-w-[620px] mx-auto mt-[22px] text-[26px] leading-[33px] text-white/90 text-center">
+        Where dreams come alive. Guide every decision & bring your imagination to life.<br>
+        Explore the fantasies you've never revealed or discover the tales of others.
+      </p>
+      <div class="flex gap-3 mt-6 flex-wrap justify-center">
+        <button class="flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-b from-[#ffe7ac] to-gold text-black transition duration-300 ease-in-out hover:scale-[0.97]">
+          Start Your Story
+          <img src="./assets/image/bookblack.svg" class="w-[35px] h-[26px]" />
+        </button>
+        <button class="flex items-center gap-2 px-6 py-3 rounded-full border border-white text-white transition duration-300 ease-in-out hover:scale-[0.97]">
+          Discover Stories
+          <img src="./assets/image/bookwhite.png" class="w-[35px] h-[26px]" />
+        </button>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- FEATURES -->
+  <section class="py-20 px-6 bg-[url('assets/paper-bg.png')] bg-cover relative">
+<!-- TOP LABEL -->
+ <!-- BUTTERFLY (TOP RIGHT) -->
+<img src="./assets/image/butttterfly.svg"
+     class="absolute 
+            right-[10px] 
+            top-[210px]
+            w-[400px] 
+            opacity-200 
+            pointer-events-none 
+            z-10">
+
+  <!-- YOUR EXISTING CONTENT -->
+  <div class="text-center relative z-20">
+
+    <!-- LABEL -->
+    <span class="font-baskervville text-[14px] tracking-[0.08em]
+                 px-5 py-2 mb-[40px]
+                 rounded-full bg-black/30 border border-white/40
+                 backdrop-blur-sm text-black/100 inline-block">
+      UNBOUND DREAMS
+    </span>
+
+
+<!-- MAIN HEADING -->
+<h2 class="font-firlest text-center
+           text-[90px] leading-[72px]
+           tracking-[-0.02em]
+           text-black mb-[50px]">
+
+  Tools of the 
+  <span class="text-[#E09F3B] ">Curators</span>
+
+</h2>
+
+    <!-- GRID instead of absolute chaos -->
+<section class="max-w-[1200px] mx-auto py-20 space-y-32">
+
+  <!-- ROW 1 -->
+  <div class="grid md:grid-cols-2 gap-16 items-center">
+
+<div class="relative inline-block w-full">
+
+  <!-- MAIN IMAGE -->
+  <img src="./assets/image/writebook.svg"
+       class="block w-full h-auto relative z-10">
+
+  <!-- GOLDEN FRAME -->
+<img src="./assets/image/Vector 2.svg"
+     class="absolute top-5 -right-7
+            w-full
+            scale-[1.10]
+            origin-top-right
+            z-20 pointer-events-none">
+
+</div>
+
+    <div>
+      <img src="./assets/image/inkpot.svg" class="w-[130px] h-[185px] mb-4">
+      <h3 class="font-firlest text-[71px] mb-3">The Ink-Well Engine</h3>
+      <p class="font-baskervville text-[18px] leading-[37px] text-black/80 max-w-[420px]">
+      Our custom-tuned AI understands the nuances of grimdark, high fantasy, and intimate storytelling. It doesn't just predict text; it weaves souls.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- ROW 2 -->
+<div class="grid md:grid-cols-[520px_1fr] gap-16 items-center">
+
+    <div>
+      <img src="./assets/image/image 5.svg" class="w-[] mb-4">
+      <h3 class="font-firlest text-[71px] mb-3 -ml-[120px]">Unrestricted Creative Flow</h3>
+      <p class="font-baskervville text-[18px] -ml-[20px] leading-[37px] text-black/80 max-w-[420px]">
+      Total freedom for mature themes, intricate romances, and visceral world-building.
+      </p>
+    </div>
+    
+<div class="relative w-[520px]">
+      <img src="./assets/image/fairydoor.svg" class="block w-full h-auto z-10">
+     <img src="./assets/image/Vector 2.svg"
+          class="absolute top-5 -right-7
+            w-full
+            scale-[1.10]
+            origin-top-right
+            z-20 pointer-events-none">
+    </div>
+
+  </div>
+
+  <!-- ROW 3 -->
+  <div class="grid md:grid-cols-2 gap-16 items-center">
+
+    <div class="relative inline-block w-full">
+      <img src="./assets/image/gamebg.svg" class="block w-full h-auto z-10">
+     <img src="./assets/image/Vector 2.svg"
+     class="absolute top-2 -right-7
+            w-full
+            scale-[1.10]
+            origin-top-right
+            z-20 pointer-events-none">
+    </div>
+
+<div class="flex flex-col items-start">
+
+  <img src="./assets/image/lore.png"
+       class="w-[150px] mb-[18px] object-contain">
+
+  <h3 class="font-firlest text-[71px] mb-[10px] leading-none">
+    Collaborative Lore
+  </h3>
+
+  <p class="font-baskervville text-[18px] leading-[28px] text-black/80 max-w-[420px]">
+    Build shared universes with other curators. Link your stories, characters, and histories in a massive, ever-evolving grimoire.
+  </p>
+
+</div>
+
+  </div>
+
+  <!-- ROW 4 -->
+<div class="grid md:grid-cols-[520px_1fr] gap-16 items-center">
+
+  <!-- TEXT -->
+  <div class="flex flex-col items-start">
+
+    <img src="./assets/image/fairybook.svg"
+         class="w-[200px] mb-[18px] object-contain">
+
+    <h3 class="font-firlest text-[71px] mb-[10px]  leading-none">
+      Visual Echoes
+    </h3>
+
+    <p class="font-baskervville text-[18px] leading-[28px] text-start text-black/80 max-w-[420px]">
+      Generate breathtaking concept art for your characters and landscapes as you write.
+    </p>
+
+  </div>
+
+  <!-- IMAGE + BUTTERFLY -->
+  <div class="relative w-[520px]">
+
+    <!-- MAIN IMAGE -->
+    <img src="./assets/image/eyes.svg"
+         class="w-full relative z-10">
+
+    <!-- GOLD FRAME -->
+    <img src="./assets/image/Vector 2.svg"
+         class="absolute top-[10px] -right-[28px]
+                w-full scale-[1.10]
+                origin-top-right
+                z-20 pointer-events-none">
+
+    <!-- BUTTERFLY (CORRECT PLACE) -->
+    <img src="./assets/image/butttterfly.svg"
+         class="absolute 
+                -left-[700px] 
+                bottom-[-180px]
+                w-[400px]
+                opacity-90
+                pointer-events-none
+                z-30">
+
+  </div>
+
+</div>
+
+</section>
+  </section>
+
+
+<!-- CTA SECTION -->
+<section class="relative w-full h-[900px] flex items-center justify-center">
+
+  <!-- MASKED VIDEO BACKGROUND -->
+  <div class="absolute inset-0 z-0 mask-page-cut scale-[1.1]">
+    <video autoplay muted loop playsinline class="absolute w-full h-[210%] object-cover top-0">
+      <source src="./assets/image/video2.mp4" type="video/mp4" />
+    </video>
+  
+         <div class="absolute inset-0 z-10 pointer-events-none 
+bg-[linear-gradient(to_top,rgba(0,0,0,1)_0%,rgba(0,0,0,0.8)_25%,rgba(0,0,0,0)_50%,rgba(0,0,0,0)_75%,rgba(0,0,0,0)_100%)]">
+</div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="relative z-30 flex flex-col items-center text-center px-4 py-24 w-full">
+
+    <!-- BOOK ICON -->
+    <img src="./assets/image/image 12.svg"
+         class="w-[265px] h-[146px] mb-6" />
+
+    <!-- HEADING -->
+    <h1 class="font-firlest text-white capitalize 
+               tracking-[-0.01em] 
+               [word-spacing:10px]
+               text-[90px] leading-none mb-[22px]">
+      Begin the Ritual
+    </h1>
+
+    <!-- SUBTEXT -->
+    <p class="font-baskervville text-white/90 text-center 
+              text-[26px] leading-[32px] 
+              mb-10 max-w-[800px]">
+      Join over 50,000 curators weaving their destinies in the shadows.
+    </p>
+
+    <!-- INPUT SECTION -->
+    <div class="relative w-full max-w-[729px] mx-auto flex items-center justify-center">
+
+      <img src="./assets/image/rightdesign.svg"
+           class="absolute left-0 top-1/2 -translate-y-1/2 w-[120px] pointer-events-none z-10" />
+
+      <img src="./assets/image/rightdesign.svg"
+           class="absolute right-0 top-1/2 -translate-y-1/2 w-[120px] scale-x-[-1] pointer-events-none z-10" />
+
+      <div class="absolute left-[95px] right-[95px] top-1/2 translate-y-12 h-[2px] bg-white/90 z-[1]"></div>
+
+      <div class="relative z-10 flex items-center w-full px-[140px] gap-3 py-8">
+
+        <input
+          type="email"
+          placeholder="Enter Email Address"
+          class="flex-1 bg-transparent text-white 
+                 placeholder:text-white/70 
+                 outline-none border-none 
+                 font-baskervville text-[20px]" />
+
+        <button
+          class="flex items-center gap-2 rounded-full 
+                 font-baskervville font-bold text-black 
+                 text-[18px] py-[7px] px-[22px] h-[55px]
+                 bg-gradient-to-r from-[#FFE7AC] to-[#E09F3B]
+                 transition duration-300 ease-in-out hover:scale-[0.97]">
+
+          Invite Me
+
+          <img src="./assets/image/bookblack.svg"
+               class="w-[24px] h-[24px]" />
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<section class="w-full  relative">
+
+
+  <div class="w-[1200px] mx-auto text-center pt-[120px] pb-60px">
+
+    <!-- LOGO -->
+    <h2 class="font-allura text-[110px] text-black">
+      DreaTale
+    </h2>
+
+    <!-- TAGLINE -->
+    <p class="font-baskervville text-[21px] text-black/60 max-w-[420px] mx-auto leading-[26px] mb-[30px]">
+     Where dreams come alive. Guide every decision & bring your imagination to life. 
+    </p>
+
+    <!-- LINKS -->
+    <div class="flex justify-center items-center gap-6 text-[22px] font-baskervville text-black/90 mb-[30px]">
+      <span class="cursor-pointer transition duration-300 ease-in-out hover:scale-[0.97] hover:opacity-70">Privacy Policy</span>
+      <span>|</span>
+      <span class="cursor-pointer transition duration-300 ease-in-out hover:scale-[0.97] hover:opacity-70">Terms Of Service</span>
+      <span>|</span>
+      <span class="cursor-pointer transition duration-300 ease-in-out hover:scale-[0.97] hover:opacity-70">Contact Us</span>
+    </div>
+
+    <!-- SOCIAL ICONS -->
+    <div class="flex justify-center gap-4 mb-[40px]">
+
+      <div class="group w-[36px] h-[36px] overflow-hidden rounded-full bg-[#DFAF5A] flex items-center justify-center cursor-pointer transition duration-300 ease-in-out hover:scale-110">
+        <img src="./assets/image/Link.svg" class="w-[40px] h-[40px] transition duration-300 ease-in-out group-hover:scale-[0.92]" />
+      </div>
+
+      <div class="group w-[36px] h-[36px] overflow-hidden rounded-full bg-[#DFAF5A] flex items-center justify-center cursor-pointer transition duration-300 ease-in-out hover:scale-110">
+        <img src="./assets/image/SVG.svg" class="w-[26px] h-[26px] transition duration-300 ease-in-out group-hover:scale-[0.92]" />
+      </div>
+
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="w-full h-[1px] bg-black mb-[20px] ">
+       
+    </div>
+
+    <!-- COPYRIGHT -->
+     
+    <p class="font-baskervville text-[20px] mb-[60px] text-black/60">
+      ©️ 2026 dreatale. crafted in the shadows.
+    </p>
+
+  </div>
+
+</section>
+</div>
+
+</body>
+</html>
